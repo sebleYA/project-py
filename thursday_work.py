@@ -1,9 +1,9 @@
-
 def get_total(list):
     total = 0
     for i in range(len(list)):
         total += list[i]
     return total
+
 
 def get_highest_population(pop_list, name):
     highest = pop_list[0]
@@ -52,6 +52,7 @@ def get_lowest_GDP(GDP_list, name):
         if(i == y):
             return name[y] + ' ' + str(lowest)
 
+
 def get_highest_GDP_per_capital(population_list, GDP_list, name):
     highest = GDP_list[0]/population_list[0]
     print(highest)
@@ -83,19 +84,17 @@ def GDP_per_capital(population_list, GDP_list):
     GDP_per_capital = []
     for idx in range(len(GDP_list)):
         GDP_per_capital.append(GDP_list[idx] / population_list[idx])
-        print(GDP_per_capital)
     return GDP_per_capital
 
-## avarage
-def get_average_GDP_per_captial(population_list,GDP_list):
-    total_GDP_per_capital = 0
+
+def get_average_GDP_per_captial(population_list, GDP_list):
     count = 0
-    x = []
-    for idx in range(len(GDP_list)):
-        x.append(GDP_per_capital(population_list, GDP_list))
-        total_GDP_per_capital += x
-        count += 1
-    return total_GDP_per_capital/count
+    avg = 0
+    x = GDP_per_capital(population_list, GDP_list)
+    for idx in range(len(x)):
+        count += x[idx]
+        avg = count/len(x)
+    return (avg)
 
 
 def main():
@@ -131,8 +130,8 @@ def main():
     # print(get_highest_GDP_per_captia(population_list,GDP_list,name))
     # print(get_lowest_GDP_per_captia(population_list,GDP_list,name))
     # print(get_average_GDP_per_captia(population_list,GDP_list))
-    print(GDP_per_capital(population_list, GDP_list))
-    print(get_average_GDP_per_captial(population_list,GDP_list))
+    # print(GDP_per_capital(population_list, GDP_list))
+    print(get_average_GDP_per_captial(population_list, GDP_list))
 
     # # print(y)
     # # print('The total numbera of countries are ' + str(country_count))
