@@ -1,0 +1,39 @@
+Assignment #9 -- World GDP!
+Objectives:
+
+apply techniques you have learned this quarter in one final project
+specifically work with files, strings, lists, counters, and accumulators
+Instructions:
+
+For this assignment, you will write a program that reads data from a file and shows a report to the user.
+
+Program Specification
+
+Here is a link to a data file:
+
+world_gdp_data_2012.txt (Links to an external site.)
+
+that contains population and GDP (Gross Domestic Product, in US dollars) data for hundreds of countries (and other geo-political units) adapted from this United Nations web site (Links to an external site.).  Each line in the file contains the name of a country, the population, and the GDP, in that order.  Your job is to write a program that analyzes this data in various ways and shows a report to the user.  Here is what the program output should include:
+
+the total number of countries in the list
+the total world population
+the name and population of the country that has the highest population
+the name and population of the country that has the lowest population
+the name and GDP of the country that has the greatest GDP
+the name and GDP of the country that has the smallest GDP
+the name and "GDP per capita" of the country that has the highest "GDP per capita"
+the name and "GDP per capita" of the country that has the lowest "GDP per capita"
+average "GDP per capita" (the average of the "GDP per capita" figures of all the countries, not the "GDP per capita" of the planet as a whole)
+a list of "rich countries" (those with a "GDP per capita" that is more than three times the average)
+a list of "very poor countries" (those with a "GDP per capita" that is less than 2.5% of the average)
+Note: "GDP per capita" is defined as "GDP divided by population". 
+Interesting fact: According to this UN data, the United States has the 17th highest "GDP per capita" of the geo-political units regions listed.
+Important caveat: It is very difficult to compare very rich economies with very poor ones in a meaningful way, so the numbers produced by this simple analysis have limited usefulness.
+
+Development Tips:
+
+Plan your program carefully on paper before you start writing code.  You may find the sample program illustrating the 'split' method to be a useful reference.
+How can you convince yourself that your program is producing correct results with such a large data file?  Consider creating a shorter file with the same format for initial testing purposes so that you can verify calculated results by hand.
+Here's one way to accomplish the last two tasks: 
+The first time you read through the file, include an accumulator that allows you to determine the average of the "GDP per capita" figures of all the countries.  Just calculate the "GDP per capita" for each country as you go, and then use the normal "find the average" pattern to determine the average value.
+Read through the file a second time and use "sifting" operations to fill in the two lists.

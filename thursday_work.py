@@ -86,7 +86,7 @@ def GDP_per_capital(population_list, GDP_list):
         print(GDP_per_capital)
     return GDP_per_capital
 
-
+## avarage
 def get_average_GDP_per_captial(population_list,GDP_list):
     total_GDP_per_capital = 0
     count = 0
